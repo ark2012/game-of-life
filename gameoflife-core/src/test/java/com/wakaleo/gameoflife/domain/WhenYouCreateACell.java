@@ -11,35 +11,15 @@ public class WhenYouCreateACell {
 
     @Test
     public void aLiveCellShouldBeRepresentedByAnAsterisk() {
-        Cell cell = Cell.fromSymbol("*");
+        Cell cell = Cell.fromSymbol(Cell.LIVE_CELL.toString());
         assertThat(cell, is(LIVE_CELL));
     }
 
     @Test
     public void aDeadCellShouldBeRepresentedByADot() {
-        Cell cell = Cell.fromSymbol(".");
+        Cell cell = Cell.fromSymbol(Cell.DEAD_CELL.toString());
         assertThat(cell, is(DEAD_CELL));
     }
 
-    @Test
-    public void aLiveCellShouldBePrintedAsAnAsterisk() {
-        assertThat(Cell.LIVE_CELL.toString(), is("*"));
-    }
-
-
-    @Test
-    public void aDeadCellShouldBePrintedAsADot() {
-        assertThat(Cell.DEAD_CELL.toString(), is("."));
-    }
-
-    @Test
-    public void aDeadCellSymbolShouldBeADot() {
-        assertThat(Cell.DEAD_CELL.getSymbol(), is("."));
-    }
-
-    @Test
-    public void aLiveCellSymbolShouldBeAnAsterisk() {
-        assertThat(Cell.LIVE_CELL.getSymbol(), is("*"));
-    }
 
 }
